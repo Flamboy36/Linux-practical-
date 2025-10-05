@@ -1,0 +1,104 @@
+prac1 editor
+vi file.txt
+:wq
+a
+yy
+p
+dd
+
+nano file.txt
+^O ^X
+
+prac2 pakage manager
+
+sudo su 
+wget http://ftp.us.debian.org/debian/pool/main/s/sl/_5.02-1+b1_amd64.deb
+yum install 
+	update
+	remove
+
+rpm -ivh
+	-Uvh
+	-e
+	-q
+
+prac3 
+
+apt install
+	update
+	upgrade
+	show
+	remove
+	purge
+
+
+dpkg -i
+	-l
+	-s
+	-r
+
+prac 4 disk partistion
+
+fdisk -l /dev/sda
+fdisk -l /dev/sdb
+fdisk /dev/sdb
+m
+n
+w
+
+prac 5 change permision
+r =4 w=2 x=1
+
+touch file.txt
+ls -l file.txt
+chmod 755 file.txt or 
+chmod u+x file.txt
+
+to create new user 
+sudo useradd name
+sudo passwd name
+sudo grpadd name
+
+chown ownername:changername file.txt
+chgrp "                    "
+
+prac 6 location 
+
+sudo su
+find /home -name "fname"
+find /var/log -type f ".*log"
+find /-type f -size +500m
+find /home -type f -mtime 2
+locate fname
+locate .*log
+plocate fname
+
+
+prac7 user account
+
+sudo su
+adduser name
+useradd name
+passwd name
+
+prac 9 config basic network
+
+ip r
+ip a
+ipconfig
+systemctl status NetworkManager
+systemctl status cups
+
+prac 10 netstat
+
+netstart -tuln
+	-tulnp
+	-tulp
+	-tulnp |grep "LISTEN"
+	-ant
+
+prac 8 cron job
+nano fn.sh
+ls -l fn.sh
+chmod u+x fn.sh
+      g+x
